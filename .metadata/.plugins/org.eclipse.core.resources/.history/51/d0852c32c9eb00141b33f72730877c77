@@ -1,0 +1,9 @@
+package com.aod6060.lwjgl.common.window;
+
+public interface WindowListener {
+	public void init(Window win);
+	
+	public void update(Window win);
+	
+	public void release(Window win);
+}

@@ -1,0 +1,8 @@
+package com.aod6060.lwjgl;
+
+
+public class Runner {
+	public static void main(String[] args) {
+		
+	}
+}

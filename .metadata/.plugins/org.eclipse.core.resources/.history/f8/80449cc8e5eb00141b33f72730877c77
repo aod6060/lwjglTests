@@ -1,0 +1,244 @@
+package com.aod6060.lwjgl.common.math;
+
+/**
+ * This final class contain static methods that
+ * does operation on Vectors and Matricies.
+ * @author Fred
+ *
+ */
+public final class LinearMath {
+	
+	
+	/*
+	 * Vector2f Methods
+	 */
+	
+	public static Vector2f add(Vector2f a, Vector2f b) {
+		return new Vector2f(a.x + b.x, a.y + b.y);
+	}
+	
+	public static Vector2f sub(Vector2f a, Vector2f b) {
+		return new Vector2f(a.x - b.x, a.y - b.y);
+	}
+	
+	public static Vector2f mul(Vector2f a, float f) {
+		return new Vector2f(a.x * f, a.y * f);
+	}
+	
+	public static Vector2f div(Vector2f a, float f) {
+		return new Vector2f(a.x / f, a.y / f);
+	}
+	
+	public static Vector2f invertSign(Vector2f a) {
+		return new Vector2f(-a.x, -a.y);
+	}
+	
+	public static float length(Vector2f f) {
+		return (float) Math.sqrt(f.x*f.x + f.y*f.y);
+	}
+	
+	public static float length2(Vector2f f) {
+		return f.x * f.x + f.y * f.y;
+	}
+	
+	public static float dot(Vector2f a, Vector2f b) {
+		return a.x * b.x + a.y * b.y;
+	}
+	
+	public static Vector2f unit(Vector2f a) {
+		float d = dot(a, a);
+		return div(a, d);
+	}
+	
+	public static float angle(Vector2f a, Vector2f b) {
+		float d = dot(a, b);
+		
+		float la = length(a);
+		
+		float lb = length(b);
+		
+		float temp = d / (la * lb);
+		
+		return (float) Math.acos(temp);
+	}
+	
+	
+	/*
+	 * Vector3f Methods
+	 */
+	public static Vector3f add(Vector3f a, Vector3f b) {
+		return new Vector3f(a.x + b.x, a.y + b.y, a.z + b.z);
+	}
+	
+	public static Vector3f sub(Vector3f a, Vector3f b) {
+		return new Vector3f(a.x - b.x, a.y - b.y, a.z - b.z);
+	}
+	
+	public static Vector3f mul(Vector3f a, float f) {
+		return new Vector3f(a.x * f, a.y * f, a.z * f);
+	}
+	
+	public static Vector3f div(Vector3f a, float f) {
+		return new Vector3f(a.x / f, a.y / f, a.z / f);
+	}
+	
+	public static Vector3f invertSign(Vector3f a) {
+		return new Vector3f(-a.x, -a.y, -a.z);
+	}
+	
+	public static float length(Vector3f f) {
+		return (float) Math.sqrt(f.x*f.x + f.y*f.y + f.z * f.z);
+	}
+	
+	public static float length2(Vector3f f) {
+		return f.x * f.x + f.y * f.y + f.z * f.z;
+	}
+	
+	public static float dot(Vector3f a, Vector3f b) {
+		return a.x * b.x + a.y * b.y + a.z * b.z;
+	}
+	
+	public static Vector3f unit(Vector3f a) {
+		float d = dot(a, a);
+		return div(a, d);
+	}
+	
+	public static float angle(Vector3f a, Vector3f b) {
+		float d = dot(a, b);
+		
+		float la = length(a);
+		
+		float lb = length(b);
+		
+		float temp = d / (la * lb);
+		
+		return (float) Math.acos(temp);
+	}
+	
+	public static Vector3f cross(Vector3f a, Vector3f b) {
+		float x = a.y * b.z - a.z * b.y;
+		float y = a.z * b.x - a.x * b.z;
+		float z = a.x * b.y - a.y * b.x;
+		
+		return new Vector3f(x, y, z);
+	}
+	
+	/*
+	 * Vector4f Methods
+	 */
+	public static Vector4f add(Vector4f a, Vector4f b) {
+		return new Vector4f(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w);
+	}
+	
+	public static Vector4f sub(Vector4f a, Vector4f b) {
+		return new Vector4f(a.x - b.x, a.y - b.y, a.z - b.z, a.w - b.w);
+	}
+	
+	public static Vector4f mul(Vector4f a, float f) {
+		return new Vector4f(a.x * f, a.y * f, a.z * f, a.w * f);
+	}
+	
+	public static Vector4f div(Vector4f a, float f) {
+		return new Vector4f(a.x / f, a.y / f, a.z / f, a.w / f);
+	}
+	
+	public static Vector4f invertSign(Vector4f a) {
+		return new Vector4f(-a.x, -a.y, -a.z, -a.w);
+	}
+	
+	public static float length(Vector4f f) {
+		return (float) Math.sqrt(f.x*f.x + f.y*f.y + f.z * f.z + f.w * f.w);
+	}
+	
+	public static float length2(Vector4f f) {
+		return f.x * f.x + f.y * f.y + f.z * f.z + f.w * f.w;
+	}
+	
+	public static float dot(Vector4f a, Vector4f b) {
+		return a.x * b.x + a.y * b.y + a.z * b.z + a.w * b.w;
+	}
+	
+	public static Vector4f unit(Vector4f a) {
+		float d = dot(a, a);
+		return div(a, d);
+	}
+	
+	public static float angle(Vector4f a, Vector4f b) {
+		float d = dot(a, b);
+		
+		float la = length(a);
+		
+		float lb = length(b);
+		
+		float temp = d / (la * lb);
+		
+		return (float) Math.acos(temp);
+	}
+	
+	/*
+	 * Matrix2f methods
+	 */
+	public static Matrix2f add(Matrix2f a, Matrix2f b) {
+		Matrix2f temp = new Matrix2f();
+		
+		temp.m[0 * Matrix2f.C + 0] = a.m[0 * Matrix2f.C + 0] + b.m[0 * Matrix2f.C + 0];
+		temp.m[0 * Matrix2f.C + 1] = a.m[0 * Matrix2f.C + 1] + b.m[0 * Matrix2f.C + 1];
+		temp.m[1 * Matrix2f.C + 0] = a.m[1 * Matrix2f.C + 0] + b.m[1 * Matrix2f.C + 0];
+		temp.m[1 * Matrix2f.C + 1] = a.m[1 * Matrix2f.C + 1] + b.m[1 * Matrix2f.C + 1];
+		
+				
+		return temp;
+	}
+	
+	public static Matrix2f sub(Matrix2f a, Matrix2f b) {
+		Matrix2f temp = new Matrix2f();
+		
+		temp.m[0 * Matrix2f.C + 0] = a.m[0 * Matrix2f.C + 0] - b.m[0 * Matrix2f.C + 0];
+		temp.m[0 * Matrix2f.C + 1] = a.m[0 * Matrix2f.C + 1] - b.m[0 * Matrix2f.C + 1];
+		temp.m[1 * Matrix2f.C + 0] = a.m[1 * Matrix2f.C + 0] - b.m[1 * Matrix2f.C + 0];
+		temp.m[1 * Matrix2f.C + 1] = a.m[1 * Matrix2f.C + 1] - b.m[1 * Matrix2f.C + 1];
+		
+				
+		return temp;
+	}
+	
+	public static Matrix2f mul(Matrix2f a, float f) {
+		Matrix2f temp = new Matrix2f();
+		
+		temp.m[0 * Matrix2f.C + 0] = a.m[0 * Matrix2f.C + 0] * f;
+		temp.m[0 * Matrix2f.C + 1] = a.m[0 * Matrix2f.C + 1] * f;
+		temp.m[1 * Matrix2f.C + 0] = a.m[1 * Matrix2f.C + 0] * f;
+		temp.m[1 * Matrix2f.C + 1] = a.m[1 * Matrix2f.C + 1] * f;
+		
+		return temp;
+	}
+	
+	public static Vector2f mul(Matrix2f a, Vector2f v) {
+		Vector2f temp = new Vector2f();
+		
+		temp.x = a.m[0 * Matrix2f.C + 0] * v.x + a.m[0 * Matrix2f.C + 1] * v.y;
+		temp.y = a.m[1 * Matrix2f.C + 0] * v.x + a.m[1 * Matrix2f.C + 1] * v.y;
+		
+		return temp;
+	}
+	
+	public static Matrix2f mul(Matrix2f a, Matrix2f b) {
+		Matrix2f temp = new Matrix2f();
+		
+		temp.m[0 * Matrix2f.C + 0] = a.m[0 * Matrix2f.C + 0] * b.m[0 * Matrix2f.C + 0] + a.m[0 * Matrix2f.C + 1] * b.m[1 * Matrix2f.C + 0];
+		temp.m[0 * Matrix2f.C + 1] = a.m[1 * Matrix2f.C + 0] * b.m[1 * Matrix2f.C + 0] + a.m[0 * Matrix2f.C + 1] * b.m[1 * Matrix2f.C + 0];
+		temp.m[1 * Matrix2f.C + 0] = a.m[0 * Matrix2f.C + 0] * b.m[0 * Matrix2f.C + 0] + a.m[0 * Matrix2f.C + 1] * b.m[1 * Matrix2f.C + 0];
+		temp.m[1 * Matrix2f.C + 1] = a.m[0 * Matrix2f.C + 0] * b.m[0 * Matrix2f.C + 0] + a.m[0 * Matrix2f.C + 1] * b.m[1 * Matrix2f.C + 0];
+		
+		
+		return temp;
+	}
+	
+	/*
+	 * Matrix3f methods
+	 */
+	
+	/*
+	 * Matrix4f methods
+	 */
+}

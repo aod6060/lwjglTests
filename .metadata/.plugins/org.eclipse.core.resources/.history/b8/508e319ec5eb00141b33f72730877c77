@@ -1,0 +1,16 @@
+package com.aod6060.lwjgl.tests;
+
+
+import java.nio.ByteBuffer;
+
+import org.lwjgl.glfw.Callbacks;
+import org.lwjgl.glfw.GLFW;
+import org.lwjgl.opengl.GL11;
+import org.lwjgl.system.MathUtil;
+
+public class Runner {
+	
+	
+	public static void main(String[] args) {
+	}
+}

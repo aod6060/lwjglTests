@@ -1,0 +1,14 @@
+package com.aod6060.lwjgl.common.window;
+
+/**
+ * This class is a wrapper for glfw. It contains 
+ * all of the window realated stuff that I need 
+ * for each of my projects. Once other windowing 
+ * kits are avaliable I'll redo this class so it 
+ * can use.
+ * @author Fred
+ *
+ */
+public class Window {
+
+}

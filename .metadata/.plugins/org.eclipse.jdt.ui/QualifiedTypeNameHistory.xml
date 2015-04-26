@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="org.lwjgl.system.MathUtil"/>
+<fullyQualifiedTypeName name="org.lwjgl.Sys"/>
+<fullyQualifiedTypeName name="java.nio.ByteBuffer"/>
+<fullyQualifiedTypeName name="org.lwjgl.glfw.GLFW"/>
+<fullyQualifiedTypeName name="org.lwjgl.glfw.Callbacks"/>
+<fullyQualifiedTypeName name="com.aod6060.lwjgl.common.Constants"/>
+<fullyQualifiedTypeName name="org.lwjgl.glfw.GLFWvidmode"/>
+<fullyQualifiedTypeName name="org.lwjgl.opengl.GLContext"/>
+<fullyQualifiedTypeName name="com.aod6060.lwjgl.common.window.WindowListener"/>
+<fullyQualifiedTypeName name="org.lwjgl.opengl.GL11"/>
+</qualifiedTypeNameHistroy>

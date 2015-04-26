@@ -1,0 +1,58 @@
+package com.aod6060.lwjgl.common.window;
+
+import org.lwjgl.glfw.GLFWErrorCallback;
+import org.lwjgl.glfw.GLFWKeyCallback;
+
+/**
+ * This class is a wrapper for glfw. It contains 
+ * all of the window realated stuff that I need 
+ * for each of my projects. Once other windowing 
+ * kits are avaliable I'll redo this class so it 
+ * can use.
+ * @author Fred
+ *
+ */
+public class Window {
+	// glfw error callback
+	private GLFWErrorCallback errorCallback;
+	private GLFWKeyCallback keyCallback;
+	
+	private long window;
+	private int width;
+	private int height;
+	
+	private WindowListener listener;
+	
+	/**
+	 * 
+	 */
+	public void init(String cap, int width, int height, WindowListener listener) {
+		
+	}
+	
+	public void mainLoop() {
+		
+	}
+	
+	public void release() {
+		
+	}
+	
+	public GLFWErrorCallback getErrorCallback() {
+		return errorCallback;
+	}
+	public GLFWKeyCallback getKeyCallback() {
+		return keyCallback;
+	}
+	public long getWindow() {
+		return window;
+	}
+	public int getWidth() {
+		return width;
+	}
+	public int getHeight() {
+		return height;
+	}
+	
+	
+}

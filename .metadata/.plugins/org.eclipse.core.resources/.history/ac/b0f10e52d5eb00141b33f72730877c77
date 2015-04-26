@@ -1,0 +1,5 @@
+package com.aod6060.lwjgl.common.math;
+
+public class Vector4f {
+
+}

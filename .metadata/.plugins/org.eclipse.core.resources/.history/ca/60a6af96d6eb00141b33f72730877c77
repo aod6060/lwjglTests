@@ -1,0 +1,68 @@
+package com.aod6060.lwjgl.common.math;
+
+/**
+ * This final class contain static methods that
+ * does operation on Vectors and Matricies.
+ * @author Fred
+ *
+ */
+public final class LinearMath {
+	
+	
+	/*
+	 * Vector2f Methods
+	 */
+	
+	public static Vector2f add(Vector2f a, Vector2f b) {
+		return new Vector2f(a.x + b.x, a.y + b.y);
+	}
+	
+	public static Vector2f sub(Vector2f a, Vector2f b) {
+		return new Vector2f(a.x - b.x, a.y - b.y);
+	}
+	
+	public static Vector2f mul(Vector2f a, float f) {
+		return new Vector2f(a.x * f, a.y * f);
+	}
+	
+	public static Vector2f div(Vector2f a, float f) {
+		return new Vector2f(a.x / f, a.y / f);
+	}
+	
+	/*
+	 * Vector3f Methods
+	 */
+	public static Vector3f add(Vector3f a, Vector3f b) {
+		return new Vector3f(a.x + b.x, a.y + b.y, a.z + b.z);
+	}
+	
+	public static Vector3f sub(Vector3f a, Vector3f b) {
+		return new Vector3f(a.x - b.x, a.y - b.y, a.z - b.z);
+	}
+	
+	public static Vector3f mul(Vector3f a, float f) {
+		return new Vector3f(a.x * f, a.y * f, a.z * f);
+	}
+	
+	public static Vector3f div(Vector3f a, float f) {
+		return new Vector3f(a.x / f, a.y / f, a.z / f);
+	}
+	/*
+	 * Vector4f Methods
+	 */
+	public static Vector4f add(Vector4f a, Vector4f b) {
+		return new Vector4f(a.x + b.x, a.y + b.y, a.z + b.z, a.w + b.w);
+	}
+	
+	public static Vector4f sub(Vector4f a, Vector4f b) {
+		return new Vector4f(a.x - b.x, a.y - b.y, a.z - b.z);
+	}
+	
+	public static Vector4f mul(Vector4f a, float f) {
+		return new Vector4f(a.x * f, a.y * f, a.z * f);
+	}
+	
+	public static Vector4f div(Vector4f a, float f) {
+		return new Vector4f(a.x / f, a.y / f, a.z / f);
+	}
+}

@@ -1,0 +1,18 @@
+package com.aod6060.lwjgl.tests;
+
+
+import org.lwjgl.glfw.GLFWErrorCallback;
+import org.lwjgl.glfw.GLFWKeyCallback;
+
+public class Runner {
+	
+	private GLFWErrorCallback errorCallback;
+	private GLFWKeyCallback keyCallback;
+	
+	private long window;
+	
+	
+	
+	public static void main(String[] args) {
+	}
+}

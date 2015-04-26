@@ -1,0 +1,39 @@
+package com.aod6060.lwjgl.common.window;
+
+
+/**
+ * This interface is the main way for the window to listen 
+ * to user requests.
+ * @author Fred
+ *
+ */
+public interface WindowListener {
+	
+	/**
+	 * This method is used to initialize the window
+	 * @param win
+	 */
+	public void init(Window win);
+	
+	/**
+	 * This method is used to update the window
+	 * @param win
+	 */
+	public void update(Window win);
+	
+	/**
+	 * This method is used to release the window
+	 * @param win
+	 */
+	public void release(Window win);
+	
+	/**
+	 * This method is used to handle key callbacks
+	 * @param win
+	 * @param key
+	 * @param scancode
+	 * @param action
+	 * @param mods
+	 */
+	public void keyHandler(Window win, int key, int scancode, int action, int mods);
+}
